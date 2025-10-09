@@ -78,7 +78,7 @@ body{
 
 #frontpt{
     background-color: var(--midnight-blue);
-    color: var(--soft-white);
+    color: var(--linen);
     align-items: center;
     text-align: center;
 }
@@ -88,23 +88,355 @@ body{
     font-size: 1.4rem;
 }
 
-#menu{
+.menu{
     background-color: var(--champagne-gold);
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0.50rem 1.5rem;
 }
 
-#menu p{
-    display: inline-block;
-    margin-left: 50px;
+.menu p{
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
-#menu a{
+.menu a{
+    display: flex;
     text-decoration: none;
     color: var(--midnight-blue);
 }
 
+#welcome {
+    background-color: var(--soft-white);
+    padding: 2rem;
+}
+
+#welcome h2{
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: var(--midnight-blue);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#welcome p {
+    font-size: 1.2rem;
+    color: var(--dark-charcoal);
+    border-bottom: 2px solid var(--champagne-gold);
+    margin: 0;
+    padding-bottom: 1rem;
+    line-height: 25px;
+}
+
+main{
+    background-color: var(--soft-white);
+    padding: 2rem;
+}
+
+main h2{
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: var(--midnight-blue);
+    margin-bottom: 20px;
+}
+
+.benefit-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    border-bottom: 2px solid var(--champagne-gold);
+    padding-bottom: 20px;
+}
+
+#artisan{
+    background-color: var(--olive-green);
+    color: var(--linen);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#artisan h3{
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+#artisan p{
+    font-size: 1.2rem;
+}
+
+#exclusive {
+    background-color: var(--olive-green);
+    color: var(--linen);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#exclusive h3{
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+#exclusive p{
+    font-size: 1.2rem;
+}
+
+#basket {
+    background-color: var(--olive-green);
+    color: var(--linen);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#basket h3{
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+#basket p{
+    font-size: 1.2rem;
+}
+
+#basket ul{
+    list-style: disc;
+    margin: 1rem;
+    line-height: 20px;
+}
+
+#gallery {
+    background-color: var(--soft-white);
+    
+}
+
+.my-photos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.my-photos > div{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--soft-white);
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+.my-photos img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.my-photos figcaption{
+    padding: 1rem;
+    color: var(--dark-charcoal);
+    font-size: 1.1rem;
+}
+
+#gallery {
+    padding-inline: 1rem;
+}
+
+#gallery h2{
+    margin-top: 20px;
+}
+
+#gallery a{
+    background-color: var(--olive-green);
+    text-decoration: none;
+    color: var(--soft-white);
+    padding: 15px 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    max-width: 1770px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--midnight-blue);
+    text-align: center;
+    padding: 4rem 2rem 1.5rem 2rem;
+}
+
+footer p{
+    color: var(--soft-white);
+    line-height: 1.5rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--champagne-gold);
+    font-weight: bold;
+}
+
+.social-media{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 200px;
+}
+
+
 /* MEDIA QUERY (medium) */
+
+@media (min-width: 600px) {
+    .menu p{
+        margin-left: 4.0rem;
+        margin-right: 4.0rem;
+        font-size: 2.0rem;
+    }
+
+    #welcome {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+
+    .benefit-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #basket{
+        grid-column: 1 / span 2;
+    }
+
+    .my-photos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        justify-content: center;
+        gap: 1rem 2rem;
+    }
+
+    #tomatoe{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #oil {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #table-set{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #chef {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #pic-basket{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+}
+
 /* MEDIA QUERY (large) */
+
+@media (min-width: 900px){
+    .menu p{
+        margin-left: 5.5rem;
+        margin-right: 5.5rem;
+        font-size: 2.2rem;
+    }
+    
+    .benefit-list, main h2{
+        max-width: 1500px;
+        gap: 1.5rem;
+    }
+
+    .my-photos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        justify-content: center;
+        gap: 1rem 2rem;
+    }
+
+    #tomatoe{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #oil {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #table-set{
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    #chef {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #pic-basket{
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
 /* MEDIA QUERY (xl) */
+
+@media (min-width: 1200px){
+
+    .menu p{
+        margin-left: 7rem;
+        margin-right: 7rem;
+        font-size: 2.3rem;
+    }
+
+    #welcome {
+        padding-left: 9rem;
+        padding-right: 9rem;
+    }
+
+    .benefit-list, main h2{
+        max-width: 1600px;
+        margin-inline: auto;
+        gap: 2rem;
+    }
+
+    .my-photos{
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .my-photos > div {
+        width: 200px;
+        margin: 0;
+    }
+
+    #gallery p{
+        max-width: 1600px;
+        width: 100%;
+        margin-left: 6.5rem;
+    }
+    
+}
